@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Dwapi.Vmmc.Core\Dwapi.Vmmc.Core.csproj" />
+      <ProjectReference Include="..\..\src\Dwapi.Vmmc.Infrastructure\Dwapi.Vmmc.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\Dwapi.Vmmc.SharedKernel.Infrastructure\Dwapi.Vmmc.SharedKernel.Infrastructure.csproj" />
+      <ProjectReference Include="..\Dwapi.Vmmc.SharedKernel.Tests\Dwapi.Vmmc.SharedKernel.Tests.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="1.60.6" />
+      <PackageReference Include="Hangfire.Core" Version="1.7.12" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="6.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+      <PackageReference Include="NUnit" Version="3.13.2" />
+    </ItemGroup>
+
+</Project>

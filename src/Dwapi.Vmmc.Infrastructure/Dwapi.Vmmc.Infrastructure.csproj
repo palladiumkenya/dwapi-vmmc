@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="8.0.0" />
+        <PackageReference Include="Dapper" Version="1.60.6" />
+        <PackageReference Include="Hangfire.Core" Version="1.7.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+        <PackageReference Include="Z.Dapper.Plus" Version="1.4.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Dwapi.Vmmc.Core\Dwapi.Vmmc.Core.csproj" />
+        <ProjectReference Include="..\Dwapi.Vmmc.SharedKernel.Infrastructure\Dwapi.Vmmc.SharedKernel.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
