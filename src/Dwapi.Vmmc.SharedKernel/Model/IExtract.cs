@@ -11,8 +11,8 @@ namespace Dwapi.Vmmc.SharedKernel.Model
         string Emr { get; set; }
         string Project { get; set; }
         bool? Processed { get; set; }
-        string QueueId { get; set; }
-        string Status { get; set; }
+        string? QueueId { get; set; }
+        string? Status { get; set; }
         DateTime? StatusDate { get; set; }
         DateTime? DateExtracted { get; set; }
         Guid FacilityId { get; set; }

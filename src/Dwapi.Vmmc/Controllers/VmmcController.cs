@@ -97,7 +97,7 @@ namespace Dwapi.Vmmc.Controllers
             if (null == extract) return BadRequest();
             try
             {
-                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.VmmcEnrollmentExtracts));
+                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.Enrollments));
                 return Ok(new {BatchKey = id});
             }
             catch (Exception e)
@@ -114,7 +114,7 @@ namespace Dwapi.Vmmc.Controllers
             if (null == extract) return BadRequest();
             try
             {
-                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.VmmcProcedureExtracts));
+                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.Procedures));
                 return Ok(new {BatchKey = id});
             }
             catch (Exception e)
@@ -130,7 +130,7 @@ namespace Dwapi.Vmmc.Controllers
             if (null == extract) return BadRequest();
             try
             {
-                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.VmmcFollowupVisitExtracts));
+                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.FollowupVisits));
                 return Ok(new {BatchKey = id});
             }
             catch (Exception e)
@@ -140,13 +140,13 @@ namespace Dwapi.Vmmc.Controllers
             }
         }
 
-        [HttpPost("VmmcMpeExtracts")]
+        [HttpPost("VmmcMhpeExtracts")]
         public IActionResult ProcessVmmcMpeExtracts([FromBody] VmmcExtractsDto extract)
         {
             if (null == extract) return BadRequest();
             try
             {
-                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.VmmcMhpeExtracts));
+                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.MhpeExtracts));
                 return Ok(new {BatchKey = id});
             }
             catch (Exception e)
@@ -156,13 +156,13 @@ namespace Dwapi.Vmmc.Controllers
             }
         }
 
-        [HttpPost("VmmcDiscontinuation")]
+        [HttpPost("VmmcDiscontinuations")]
         public IActionResult ProcessVmmcDiscontinuation([FromBody] VmmcExtractsDto extract)
         {
             if (null == extract) return BadRequest();
             try
             {
-                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.VmmcDiscontinuationExtracts));
+                var id = BackgroundJob.Enqueue(() => _VmmcService.Process(extract.Discontinuations));
                 return Ok(new {BatchKey = id});
             }
             catch (Exception e)
